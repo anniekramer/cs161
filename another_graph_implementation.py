@@ -28,7 +28,7 @@ def find_first_path_between_nodes(graph, start, end, path=[]):
         return None
 
     # For a given node in the list of nodes corresponding to the start node key,
-    # check if the node is in the path list. If note, create a new path and return it.
+    # check if the node is in the path list. If not, create a new path and return it.
     for node in graph[start]:
         if node not in path:
             new_path = find_first_path_between_nodes(graph, node, end, path)
