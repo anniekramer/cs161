@@ -9,3 +9,11 @@ def counting_sort(list, k):
             list[index] = i
             index += 1
             counter[i] -= 1
+
+    print list
+    print "Done!"
+
+test_array = [5,2,5,6,4,3,6]
+test_array_range = len(test_array)
+
+counting_sort(test_array, test_array_range)
