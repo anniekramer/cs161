@@ -2,13 +2,14 @@ def recursive_bfs(graph, start, visited=None):
     if visited is None:
         visited = set()
     queue = [start]
-    vertex = queue.pop(0)
-
-    if vertex not in visited:
+    
+    while queue:
+        vertex = queue.pop(0)
         visited.add(vertex)
         queue.extend(graph[vertex] - visited)
-    while queue:
-        recursive_bfs(visited[graph] - start)
+        
+        for next_vertex in graph[start] - visited:
+            recursive_bfs(graph, next_vertex, visited)
     
     return visited
 
