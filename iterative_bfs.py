@@ -1,5 +1,6 @@
 def iterative_bfs(graph, start):
-    visited, queue = set(), [start]
+    visited = set()
+    queue = [start]
     while queue:
         vertex = queue.pop(0)
         if vertex not in visited:

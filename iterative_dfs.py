@@ -1,5 +1,6 @@
 def iterative_dfs(graph, start):
-    visited, stack = set(), [start]
+    visited = set()
+    stack = [start]
     while stack:
         vertex = stack.pop()
         if vertex not in visited:
