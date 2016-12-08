@@ -1,10 +1,14 @@
-def recursive_dfs(graph, start, visited=None):
+def recursive_bfs(graph, start, visited=None):
     if visited is None:
         visited = set()
-    visited.add(start)
-    
-    for next_vertex in graph[start] - visited:
-        recursive_dfs(graph, next_vertex, visited)
+    queue = [start]
+    vertex = queue.pop(0)
+
+    if vertex not in visited:
+        visited.add(vertex)
+        queue.extend(graph[vertex] - visited)
+    while queue:
+        recursive_bfs(visited[graph] - start)
     
     return visited
 
@@ -16,4 +20,4 @@ graph = {'A': set(['B', 'C']),
          'E': set(['B', 'F']),
          'F': set(['C', 'E'])}
 
-print recursive_dfs(graph, 'A')
+print recursive_bfs(graph, 'A')
