@@ -11,12 +11,12 @@ class Graph(object):
         for node1, node2 in connections:
             self.add(node1, node2)
 
-    def add_connection_between_nodes:
+    def add_connection_between_nodes(self, node1, node2):
         self._graph[node1].add(node2)
         if not self._directed:
             self._graph[node2].add(node1)
 
-    def remove_references_to_node:
+    def remove_references_to_node(self,node):
         for node, connections in self._graph.iteritems():
             try:
                 connections.remove(node)

@@ -78,3 +78,13 @@ def find_shortest_path_between_nodes(graph, start, end, path=[]):
                     shortest_path_between_nodes = new_path
 
     return shortest_path_between_nodes
+
+graph = {'A': ['B', 'C'],
+         'B': ['C', 'D'],
+         'C': ['D'],
+         'D': ['C'],
+         'E': ['F'],
+         'F': ['C']}
+
+print find_first_path_between_nodes(graph, 'A', 'D'
+    )
