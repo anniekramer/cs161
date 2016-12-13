@@ -8,6 +8,7 @@ def fib(n):
 
 # test cases
 print F(0)
+# base case: if n is 1, we can return the answer directly
 print F(1)
 print F(24)
 print F(997)
