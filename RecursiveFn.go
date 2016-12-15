@@ -1,4 +1,4 @@
-func Recursive(number int) int {
+func RecursiveFn(number int) int {
     // base case here
     if number == 1 {
         return number
@@ -9,5 +9,5 @@ func Recursive(number int) int {
 }
 
 func Main() {
-    answer := Recursive(4)
+    answer := RecursiveFn(4)
 }
